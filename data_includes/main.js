@@ -1,15 +1,17 @@
-//var counterOverride = 0 
-//var counterOverride = 1 
+//var counterOverride = 0
+//var counterOverride = 1
 //var counterOverride = 2
-//var counterOverride = 35
-PennController.DebugOff()
+//var counterOverride = 3
+
+// Enable debug
+// PennController.DebugOff()
 
 var shuffleSequence = seq("counterbuffer","setcounter", "instruct","beginpractice",
            //practice
-            "practice_1","sep1","practice_2","sep2","practice_3","sep3","practice_4","sep4", sepWith("sep", rshuffle(startsWith("burn_"))), "endpractice",  
+            "practice_1","sep1","practice_2","sep2","practice_3","sep3","practice_4","sep4", sepWith("sep", rshuffle(startsWith("burn_"))), "endpractice",
             // Experiment
-             sepWith("sep", rshuffle(startsWith("enc3_"),startsWith("filledgap_"),startsWith("fill_"),startsWith("anim_"),startsWith("genfill_"))),                                          
-            // End 
+             sepWith("sep", rshuffle(startsWith("enc3_"),startsWith("filledgap_"),startsWith("fill_"),startsWith("anim_"),startsWith("genfill_"))),
+            // End
              "end","sendresults","end2");
 var practiceItemTypes = ["practice"];
 
@@ -50,7 +52,7 @@ var items = [
 
 //separator
 ["sep", "Separator", { }],
-  
+
 // Send the results to server
 ["sendresults", "__SendResults__", { }],
 
@@ -58,8 +60,8 @@ var items = [
  ["setcounter", "__SetCounter__", { }],
 
 
-  //html files 
-  
+  //html files
+
   ["intro", "Form", {
     html: { include: "intro.html" },
     validators: {
@@ -80,9 +82,9 @@ var items = [
            html: { include: "welcome.html" } } ],
 
 // Guided practice
-  
+
 // Practice for Relatedness
-        
+
 
 ["practice_1", "DashedSentence", {s: "This sentence is to get you used to a moving window display.", hideProgressBar: true}],
 ["sep1", "Separator", {transfer:"keypress", normalMessage: "That's how reading in this format will feel. The actual sentences will be a bit more complicated, and will be followed by a question. Press any key for the next practice item.", hideProgressBar: true}],
@@ -96,21 +98,21 @@ var items = [
         "Question",    {q: "Was the floor cleaned by a janitor?",
                  as: [ "J - No", "F - Yes"]}],
 ["sep3", "Separator", {transfer:"keypress", normalMessage: "Some of the sentences will be a bit long. Remember to read at a pace that feels natural for you so that you can understand everything. Press any key to continue on to the next practice item.", hideProgressBar: true}],
-  
+
 ["practice_4", "DashedSentence", {s: "My friends doubted that I saw whales when I went out on a boat, but I saw three whales with my binoculars.", hideProgressBar: true },
         "Question",    {q: "Did others believe I saw whales?",
                  as: [ "J - No", "F - Yes"]}],
 ["sep4", "Separator", {transfer:"keypress", normalMessage: "Up next you'll see a few more practice items to get used to the task. Press any key to continue.", hideProgressBar: true}],
-    
- //Burn-in 
- 
-[["burn_enc",200], "DashedSentence", {s: "It seemed obvious that the cake that the candles were burning on had not been properly frosted by the chef."},"Question", {q: "Are people probably pleased with this cake?", as: [ "J - No", "F - Yes"]}], 
+
+ //Burn-in
+
+[["burn_enc",200], "DashedSentence", {s: "It seemed obvious that the cake that the candles were burning on had not been properly frosted by the chef."},"Question", {q: "Are people probably pleased with this cake?", as: [ "J - No", "F - Yes"]}],
 [["burn_enc",201], "DashedSentence", {s: "It wasn't clear that the tape that the store was selling next to the staples was double-sided, confusing many customers."},"Question", {q: "Were customers confused about the staples?", as: [ "J - No", "F - Yes"]}],
-[["burn_enc",202], "DashedSentence", {s: "Everyone was shocked that the bakery that was next to the library had been closed down by inspectors."},"Question", {q: "Were people surprised to hear the news?", as: [ "F - Yes", "J - No"]}], 
+[["burn_enc",202], "DashedSentence", {s: "Everyone was shocked that the bakery that was next to the library had been closed down by inspectors."},"Question", {q: "Were people surprised to hear the news?", as: [ "F - Yes", "J - No"]}],
 [["burn_enc",203], "DashedSentence", {s: "It was fortunate that the artist that taught a photography class had free time to work with young students."},"Question", {q: "Was the artist generous with their time?", as: [ "F - Yes", "J - No"]}],
-[["burn_11",204], "DashedSentence", {s: "The man saw his friend walking with her daughter, but it wasn't clear who else he saw at the park."},"Question", {q: "Was the man walking in a park?", as: [ "F - Yes", "J - No"]}], 
-[["burn_ll",205], "DashedSentence", {s: "David saw that his friend was eating with chopsticks, but he didn't see what his friend's wife was eating."},"Question", {q: "Was David's friend eating with a spoon?", as: [ "J - No", "F - Yes"]}], 
-[["burn_ll",206], "DashedSentence", {s: "Mariana heard that the governor gave a speech at a podium, but she didn't know where the mayor gave a speech from."},"Question", {q: "Is it likely she watched the mayor give a speech?", as: [ "J - No", "F - Yes"]}], 
+[["burn_11",204], "DashedSentence", {s: "The man saw his friend walking with her daughter, but it wasn't clear who else he saw at the park."},"Question", {q: "Was the man walking in a park?", as: [ "F - Yes", "J - No"]}],
+[["burn_ll",205], "DashedSentence", {s: "David saw that his friend was eating with chopsticks, but he didn't see what his friend's wife was eating."},"Question", {q: "Was David's friend eating with a spoon?", as: [ "J - No", "F - Yes"]}],
+[["burn_ll",206], "DashedSentence", {s: "Mariana heard that the governor gave a speech at a podium, but she didn't know where the mayor gave a speech from."},"Question", {q: "Is it likely she watched the mayor give a speech?", as: [ "J - No", "F - Yes"]}],
 [["burn_ll",207], "DashedSentence", {s: "Anne knew that the TV host liked to start his show with a song, but she didn't know how news anchors start their programs."},"Question", {q: "Is it likely Anne doesn't watch the news a lot?", as: [ "F - Yes", "J - No"]}],
 [["burn_ll",208], "DashedSentence", {s: "Vanessa was reminded that Cassie liked to bake with whole wheat flour, but she didn't know what Jason liked to bake with on the weekends."},"Question", {q: "Is Vanessa more familiar with Cassie's baking habits than Jason's?", as: [ "F - Yes", "J - No"]}],
 
@@ -135,7 +137,7 @@ var items = [
 [["fill_x",52],"DashedSentence", {s: "Everyone forgot that the paper that had been erased was lying on the desk in the front of the room."},"Question", {q: "Did people remember where the paper was?", as: [ "J - No", "F - Yes"]}],
 
 
- 
+
 //animacy fillers
 
 [["anim_a",88],"DashedSentence", {s: "The kindergarten teacher pointed out the colorful toy which, as of yesterday, the young girl has played with incessantly."},"Question", {q: "Was the young girl playing with another classmate? ", as: [ "J - No", "F - Yes"]}],
