@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <style>
+    form{
+      width: 50em;
+      margin-left: auto;
+      margin-right: auto;
+      border: 1px solid #cacfd2;
+      padding: 0% 2% 2% 2%;
+      box-shadow: 4px 4px 2px #cacfd2;
+      border-radius: 1em;
+    }
+    #responseTypes{
+      text-align: center;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    #responseTypes td{
+      padding-left: 0.5em;
+      padding-right: 0.5em;
+    }
+    p{
+      clear: both;
+    }
+    #header{
+      margin: 2em;
+      overflow: auto;
+    }
+    table td{
+      padding-bottom: 1em;
+    }
+  </style>
+
+</head>
+
+<form>
+  <p>
+    <b>Instructions</b>
+    
+    <br>
+    This experiment is being conducted by Syntax, Semantics, and Language Processing Lab (s/lab) at UC Santa Cruz. In this experiment, you will be reading sentences one word at a time by pressing the space bar. Please read carefully and at a pace that feels natural to you so that you are understanding everything. You will have a chance to go through some practice items before the experiment begins to get used to reading sentences in this way.
+    <br><br>
+    After each sentence, you will be asked a question about what you just read, so make sure you are paying attention! You can respond to the questions by pressing the "F" and "J" keys. Press "F" to respond "Yes" and "J" to respond "No."
+    <br><br>
+    As you move through the experiment, please keep your thumbs resting on the space bar. Please do not take a break in the middle of a sentence. You may take breaks in between sentences, but make sure you have not started pressing through a sentence first.  
+   
+  </p>
+  <p>
+    <b>Participant rights</b>
+    <br>
+    Your participation in this experiment is entirely voluntary. All of your responses are completely confidential and will not be linked to your identity.
+  <p>
+    <b>Risks</b>
+    <br>
+    This experiment involves no known risks or discomfort to you.
+    
+  </p>
+    <p>
+  <b>Benefits</b>
+    <br>
+    You will be compensated with one SONA credit for your participation in this study.
+  </p>
+  
+  <p>
+    Before continuing to the experiment, please answer the following demographic questions. Your responses will not affect your ability to receive credit for the experiment, and they will not be linked to your name.
+  </p>
+
+  <table>
+        <tr>
+      <td>
+        1. Subject ID:*
+      </td>
+      <td>
+        <input name="subjectid" type="text" size="30" class="obligatory" required />
+      </td>
+      <td colspan="1">
+        <label class="error" for="prolificid">
+        </label>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        2. Age:*
+      </td>
+      <td>
+        <input name="age" type="text" size="30" class="obligatory" required />
+      </td>
+      <td colspan="1">
+        <label class="error" for="age">
+        </label>
+      </td>
+    </tr>
+       <tr>
+      <td>
+        3. Gender:*
+      </td>
+      <td>
+        <input name="gender" type="text" size="30" class="obligatory" required />
+      </td>
+      <td colspan="1">
+        <label class="error" for="gender">
+        </label>
+      </td>
+    </tr> 
+    <tr>
+      <td>
+        4. Do you consider English to be your native language?*
+      </td>
+      <td>
+        <input name="languageEnglish" type="radio" value="yes" id="languageEnglishYes" class="obligatory"/>
+          <label for="languageEnglishYes">Yes</label>
+        <input name="languageEnglish" type="radio" value="no" id="languageEnglishNo" class="obligatory"/>
+          <label for="languageEnglishNo">No</label>
+      </td>
+      <td colspan="1">
+        <label class="error" for="languageEnglish"></label>
+      </td>
+    </tr>
+    <tr>
+      <td colspan="2">
+        5. If you answered 'yes' to (4): Did you speak any other languages besides English at home or elsewhere before the age of 8? What languages, and in what contexts (e.g., at school, at home)? Write N/A if not applicable.
+      </td>
+    </tr>
+    <tr>
+      <td colspan="2">
+        <textarea name="otherLangNat" class="obligatory" rows="5" cols="40"></textarea>
+      </td>
+    </tr>
+    <tr>
+      <td colspan="2">
+        6. If you answered 'no' to (4): What do you consider to be your native language(s)? At what age did you start learning English, and in what contexts (e.g., at school, at home)? Write 'N/A' if not applicable.
+      </td>
+    </tr>
+    <tr>
+      <td colspan="2">
+        <textarea name="otherLangNN" class="obligatory" rows="5" cols="40"></textarea>
+      </td>
+    </tr>
+    <tr>
+      <tr>
+      <td colspan="2">
+        7. Have you ever been diagnosed with a reading or attention disorder? If so, please specify. Write 'N/A' if not applicable.
+      </td>
+    </tr>
+    <tr>
+      <td colspan="2">
+        <textarea name="readAttDisorder" class="obligatory" rows="5" cols="40"></textarea>
+      </td>
+    </tr>
+    <tr>
+      <td colspan="2">
+        8. I have read the above information, and I consent to take part in this study.* <input type="radio" class="obligatory" name="consent" id="exptConsent" />
+      </td>
+      <td colspan="1">
+        <label class="error" for="consent"></label>
+      </td>
+    </tr>
+    <tr>
+      <td colspan="2">
+        <i>* Obligatory information</i>
+      </td>
+    </tr>
+  </table>
+
+</form>
+</html>
